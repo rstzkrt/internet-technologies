@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Explora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@1,300&family=Explora&display=swap');
+
+.container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.header-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 220px;
+    border-radius: 20px;
+    transform: rotate(7deg);
+    box-shadow: 5px 5px #888888;
+}
+.header{
+    font-family: 'Bebas Neue', cursive;
+    padding: 2%;
+    text-align: center;
+}
+
+.collection{
+    margin-right:auto;
+    margin-left:auto;
+}
+
+figcaption{
+    font-style: italic;
+    text-align: left;
+    font-size: x-small;
+    padding-bottom: 20px;
+}
+
+.fig-img{
+    border: 1px solid navajowhite;
+    height: 100px;
+    width:153px;
+}
+article{
+    column-width: 270px;
+    max-width: 70%;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+p{
+    font-family: 'Bitter', serif;
+    margin-top: 0;
+}
+
+footer{
+    text-align: center;
+}
+
+.pulled-quotes {
+    font-family: 'Bebas Neue', cursive;
+    color: red;
+    float: right;
+    width: 150px;
+    background: white;
+    font-weight: bold;
+    margin: 1.5rem;
+}
+blockquote {
+    margin: 0;
+}
+.left-pic{
+    margin: 1rem;
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+.right-pic{
+    margin: 1rem;
+    float: right;
+    width: 150px;
+    height: 150px;
+}
