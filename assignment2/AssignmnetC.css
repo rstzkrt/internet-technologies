@@ -1,0 +1,47 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+}
+.content-background {
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right:auto;
+    max-width: 50%;
+    max-height: 50%;
+    background-color: gold;
+    border: 5px dashed crimson;
+    border-radius: 4px;
+    padding: 20px;
+}
+.banner{
+    padding-top: 10px;
+}
+img{
+    border: 4px solid darkred;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 50%;
+    max-width: 50%;
+}
+
+.paragraph{
+    border: 3px solid rosybrown;
+    background-color: blanchedalmond;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+p{
+    margin: 1.5rem;/* equidistant from all of the border lines*/
+}
+
+h1{
+    font-size: xxx-large;
+    border-bottom: 3px solid darkred;
+    line-height: 1.2;
+    margin-left:5%;
+}
+a:hover{
+    color:goldenrod;
+}

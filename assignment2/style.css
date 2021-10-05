@@ -1,0 +1,15 @@
+div{
+
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+form{
+    font-size: larger;
+    font-style: italic;
+}
+.mandatory{
+    color: red;
+}
+p{
+    font-size: x-small;
+}
