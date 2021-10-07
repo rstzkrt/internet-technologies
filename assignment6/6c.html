@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSBrowser</title>
+</head>
+
+<script>
+    function validateForm() {
+        let isValid = true;
+
+        if (!ifRequired(document.getElementById('name').value)) {
+            isValid = false;
+            document.getElementById('name-err').innerText = "Name is required* Hint: Provide a String";
+        }
+        if (!ifRequired(document.getElementById('surname').value)) {
+            isValid = false;
+            document.getElementById('surname-err').innerText = "Surname is required* Hint: Provide a String";
+        }
+        if (!ifPhoneNo(document.getElementById('phoneNo').value)) {
+            isValid = false;
+            document.getElementById('phoneNo-err').innerText = "Please enter a Phone number!";
+        }
+        if (!ifEmail(document.getElementById('email').value)) {
+            isValid = false;
+            document.getElementById('email-err').innerText = "Please enter an Email! ";
+        }
+
+        function ifRequired(string) {
+            if (!string) return false;
+            if (typeof string === 'string') return false;
+            string = string.toString().trim();
+            return string !== "";
+        }
+
+        function ifEmail(email) {
+            if (!email) return false;
+            email = email.toString().trim();
+            const regExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return regExp.test(email);
+        }
+
+        function ifPhoneNo(number) {
+            if (!number) return false;
+            number = number.toString().trim();
+            const regExp = /^\d{9}$/;
+            return regExp.test(number);
+        }
+
+        console.log(isValid);
+        return isValid;
+    }
+</script>
+<style>
+    div {
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+
+    }
+</style>
+<body>
+
+<form style="padding: 20px 20px;background-color: cornflowerblue">
+    <div>
+        <label id="name-label">Name: <input type="text" name="name" id="name"></label><br>
+        <label style="color: red" id="name-err"></label><br>
+        <br>
+        <label style="margin: 5px" id="surname-label">Surname: <input type="text" name="surname"
+                                                                      id="surname"></label><br>
+        <label style="color: red" id="surname-err"></label><br>
+        <br>
+        <label style="margin: 5px" id="phoneNo-label">Phone No: <input type="number" name="phoneNo"
+                                                                       id="phoneNo"></label><br>
+        <label style="color: red" id="phoneNo-err"></label><br>
+        <br>
+
+        <label style="margin: 5px" id="email-label">Email:<input type="email" name="email" id="email"></label><br>
+        <label style="color: red" id="email-err"></label><br>
+        <br>
+
+        <label style="margin: 5px" id="city-label">City:<input type="text" name="city" id="city"></label><br>
+        <br>
+
+        <button type="button" onclick="validateForm()">Validate</button>
+    </div>
+</form>
+</body>
+</html>
