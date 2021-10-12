@@ -1,0 +1,51 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+//Assignment 9b
+    function update() {
+        $.ajax('/ops', {
+            type: 'POST',
+            data: {
+                num1: document.getElementById('num1').value,
+                num2: document.getElementById('num2').value,
+                operation: $("input[type='radio']:checked").val()
+            },
+            success: function (data, status, xhr) {
+                $('h2').html(JSON.stringify(data))
+            },
+            error: function (jqXhr, textStatus, errorMessage) {
+                console.log(errorMessage)
+            }
+        });
+    }
+
+</script>
+<style>
+    form,h2{
+        margin-right: auto;
+        margin-left: auto;
+        width: 250px;
+    }
+    form{
+        background-color: cornflowerblue;
+    }
+</style>
+
+<form>
+    <label>Number1</label>
+    <input style="width: 97%;" id="num1" type="number" >
+    <label>Number2</label>
+    <input style="width: 97%;" id="num2" type="number" >
+
+    <div>
+        <label>Operations:</label><br>
+        <label>Add</label><input value="SUM" type="radio" id="operation" name="ops">
+        <label>Sub</label><input value="SUB" type="radio" id="operation" name="ops"><br>
+        <label>Div</label><input value="DIV" type="radio" id="operation" name="ops">
+        <label>Mul</label><input value="MUL" type="radio" id="operation" name="ops"><br>
+    </div>
+
+    <button style="width: 100%" id="post-button" type="button" onclick="update()">Calculate</button>
+
+</form>
+
+<h2></h2>
