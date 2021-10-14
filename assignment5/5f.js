@@ -1,14 +1,16 @@
 class Person{
     constructor(name, surname) {
-        this.name = name;
-        this.surname = surname;
+        this._name = name;
+        this._surname = surname;
     }
-    setFullName = function (firstName,lastName) {
-        this.name=firstName;
-        this.surname=lastName;
+
+    get name(){
+        return `${this._name} ${this._surname}`;
     }
-    getFullName = function () {
-        return `${this.name} ${this.surname}`;
+
+    set name(string){
+        this._name=string.split(" ")[0];
+        this._surname=string.split(" ")[1];
     }
 }
 
@@ -18,5 +20,5 @@ class Student extends Person{
 
 let student1=new Student("resat","ozkurt");
 
-student1.setFullName("NewResat","NewOzkurt")
-console.log(student1.getFullName())
+student1.name="NewResat NewOzkurt"
+console.log(student1.name)
